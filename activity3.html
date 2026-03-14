@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function f1(some) {
+            document.write(some);
+        }
+        function sum(a, b) {
+            let sum = a + b;
+            f1(sum)
+        }
+
+        let promise = new Promise(function
+            (resolve, reject) {
+            let x = 0;
+            if (x == 0) {
+                resolve("Okay");
+            }
+            else {
+                reject("Error")
+            }
+        })
+
+        promise.then(
+            function (value) {
+                sum(23, 2);
+            },
+            function (error) {
+                sum("error");
+            }
+        )
+    </script>
+</body>
+
+</html>
